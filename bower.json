@@ -1,0 +1,26 @@
+{
+  "name": "AngularSample",
+  "appPath": "src/WebContent/",
+  "authors": [
+    "santosh sagar <msg2santoshsagar@gmail.com>"
+  ],
+  "description": "Angular Sample Website",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.6.4",
+    "angular-bootstrap": "^2.5.0",
+    "angular-ui-router": "^0.4.2",
+    "ngstorage": "^0.3.11",
+    "angular-translate": "^2.15.1"
+  }
+}
