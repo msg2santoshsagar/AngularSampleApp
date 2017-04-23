@@ -10,9 +10,18 @@
   "devDependencies": {
     "bower": "1.7.9",
     "browser-sync": "2.17.0",
+    "event-stream": "^3.3.4",
     "gulp": "3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.1",
-    "gulp-uglify": "^2.1.2"
+    "gulp-inject": "^4.2.0",
+    "gulp-natural-sort": "^0.1.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-print": "^2.0.1",
+    "gulp-uglify": "^2.1.2",
+    "main-bower-files": "^2.13.1",
+    "run-sequence": "^1.2.2",
+    "yargs": "^7.1.0"
   }
 }
