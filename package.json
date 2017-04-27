@@ -19,6 +19,8 @@
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-print": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.1.2",
     "gulp-uglify": "^2.1.2",
     "main-bower-files": "^2.13.1",
     "run-sequence": "^1.2.2",
