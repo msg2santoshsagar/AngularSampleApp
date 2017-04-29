@@ -15,7 +15,8 @@
             /*'infinite-scroll',
             'angular-loading-bar'*/
             'ngStorage',
-            'ui.router'
+            'ui.router',
+            'ui.thumbnail'
             
         ])
         .run(run);

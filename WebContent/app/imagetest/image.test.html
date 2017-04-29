@@ -1,0 +1,45 @@
+<style>
+.img-container {
+	/* height: 500px !important;
+	width: 400px !important; */
+}
+
+.img-container img {
+	/* height: auto;
+	width: inherit; */
+}
+</style>
+<div ng-cloak>
+	<div class="row">
+		<h3>Image Test</h3>
+	</div>
+
+	<div class="row">
+		<div class="row">
+			<div class="col-md-8">
+				<input type="text" ng-modal="vm.image.fileName" class="form-control" />
+			</div>
+			<div class="col-md-4">
+				<button ng-click="vm.handleFile();">BROWSE</button>
+			</div>
+		</div>
+		
+		<!-- <div class="row">
+			<div class="col-md-8">
+			<input type="file" id="imgFile" name="imgFile" class="form-control" accept="image/*" />
+			</div>
+		</div> -->
+
+		<div class="row">
+			<div class="col-md-6 img-container">
+				<img ng-src="{{vm.image.imageSrc}}" alt="Image" height="360px" width="540px"/>
+				<!-- <p>img :{{vm.image.imageName}} : {{vm.image.imageSrc}}</p> -->
+			</div>
+			<div class="col-md-5 img-container">
+				<canvas id="canvas1"></canvas>
+			</div>
+		</div>
+
+
+	</div>
+</div>

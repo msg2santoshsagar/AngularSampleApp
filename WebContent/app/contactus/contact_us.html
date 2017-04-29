@@ -1,6 +1,26 @@
+<style>
+	.redError{
+		color:red;
+	}
+</style>
 <div ng-cloak>
-    <div class="row">
-        <h3>Contact Us</h3>
-        
-    </div>
+	<div class="row">
+		<h3>Contact Us</h3>
+
+	</div>
+
+	<form>
+		<input type="text" ng-model="vm.countryCode" />
+		<button ng-click="vm.changePattern()" type="submit">CHANGE</button>
+	</form>
+	<br />
+	<p>Current Pattern : {{vm.currentPattern}}<button ng-click="vm.printFormData()">Print</button></p>
+	<form name="form1" novalidate >
+		<input ng-model="vm.phoneNo" type="text" ng-pattern="vm.currentPattern" autocomplete="off"
+			name="phone1" id="phone1" ng-required="true"/>
+		<p ng-show="form1.phone1.$error.pattern" class="redError">Phone No is not valid.</p>
+		<p ng-show="form1.phone1.$error.required" class="redError">Phone No is required.</p>
+	</form>
+
+
 </div>
