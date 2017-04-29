@@ -36,7 +36,7 @@
 							ctx.imageSmoothingEnabled = false;
 							ctx.drawImage(imageObj,0,0,canvasWidth,canvasHeight);
 							
-							ImageTestService.resize(imageObj,canvasWidth,canvasHeight).then(
+							ImageTestService.resizeStep(imageObj,canvasWidth,canvasHeight).then(
 									function(rImage){
 										console.log("Resized Image :: ",rImage);
 										vm.imageSrc=rImage.src;
