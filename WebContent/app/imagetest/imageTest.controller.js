@@ -5,9 +5,9 @@
 	.module('angularSampleApp')
 	.controller('ImageTestController', ImageTestController);
 
-	ImageTestController.$inject = ['$scope', '$state','SelectFileService'];
+	ImageTestController.$inject = ['$scope', '$state','SelectFileService','ImageTestService'];
 
-	function ImageTestController ($scope, $state,SelectFileService) {
+	function ImageTestController ($scope, $state,SelectFileService,ImageTestService) {
 		var vm = this;
 		vm.image={};
 		vm.image.imageSrc="";
@@ -36,12 +36,15 @@
 							ctx.imageSmoothingEnabled = false;
 							ctx.drawImage(imageObj,0,0,canvasWidth,canvasHeight);
 							
+							ImageTestService.resize(imageObj,canvasWidth,canvasHeight).then(
+									function(rImage){
+										console.log("Resized Image :: ",rImage);
+										vm.imageSrc=rImage.src;
+									},function(err){
+										console.log("Error Occured While resizing image :: ",err);
+									}
+							);
 							
-						//	new  thumbnailer(canvasElement,imageObj,200,4);
-							
-							/*var HERMITE = new Hermite_class();
-							//default resize
-							HERMITE.resample(canvasElement, canvasWidth, canvasHeight);*/
 							
 						}
 						imageObj.src=image;
