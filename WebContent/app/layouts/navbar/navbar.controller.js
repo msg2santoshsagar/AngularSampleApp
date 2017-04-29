@@ -9,7 +9,6 @@
 
     function NavbarController ($state) {
         var vm = this;
-        console.log("Nav Bar Controller Created.");
-
+        
     }
 })();

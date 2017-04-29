@@ -25,6 +25,7 @@
 			input.onchange=function(e){
 				var file=input.files[0];
 				if(file==null){
+					console.log("Slect file service :: File Found Null, Returning");
 					return;
 				}
 
