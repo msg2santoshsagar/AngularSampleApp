@@ -23,7 +23,8 @@ gulp.task('minify', function() {
 	    .pipe(gulp.dest('WebContent/app/'))
 });*/
 
-gulp.task('inject:dev', inject.app);
+gulp.task('inject:dev', inject.dev);
+gulp.task('inject:js', inject.js);
 
 gulp.task('deleteMinFiles',function(){
 	return gulp.src(['WebContent/app/**/*min.js'])

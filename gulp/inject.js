@@ -16,10 +16,11 @@ var handleErrors = require('./handle-errors');
 
 
 module.exports = {
-    app: app
+    dev: devInject,
+    js :jsInject
 }
 
-function app() {
+function devInject() {
     return gulp.src(config.app + 'index.html')
         .pipe(inject(gulp.src(config.app + 'app/**/*.js')
         	.pipe(print())
@@ -30,4 +31,17 @@ function app() {
         		return "File Path : "+filePath;
         	}))	
         .pipe(gulp.dest(config.app));
+}
+
+function jsInject() {
+    return gulp.src(config.app + 'assets/fileNames.html')
+        .pipe(inject(gulp.src(config.app + 'app/**/*.js')
+        	.pipe(print())
+            .pipe(plumber({errorHandler: handleErrors}))
+            .pipe(naturalSort())
+            .pipe(angularFilesort()), {relative: false}))
+        	.pipe(print(function(filePath){
+        		return "File Path : "+filePath;
+        	}))	
+        .pipe(gulp.dest(config.app+ 'assets/'));
 }
