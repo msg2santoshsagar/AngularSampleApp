@@ -16,7 +16,8 @@
             'angular-loading-bar'*/
             'ngStorage',
             'ui.router',
-            'ui.thumbnail'
+            'ui.thumbnail',
+            'jkAngularRatingStars'
             
         ])
         .run(run);
